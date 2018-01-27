@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.square.race.MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linearLayout3">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Average speed calculator"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvDistanceI"
+                    android:layout_marginTop="0dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/linearLayout">
+
+                    <TextView
+                        android:text="Distance:"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvDistanceI"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginStart="0dp"
+                        android:textSize="18sp"
+                        android:layout_alignTop="@+id/textView2"
+                        android:layout_toRightOf="@+id/rbDistanceMilesI"
+                        android:layout_toEndOf="@+id/rbDistanceMilesI"
+                        android:layout_weight="0.66"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="78dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="10"
+                        android:id="@+id/etDistanceI" />
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:checkedButton="@+id/rbDistanceMilesI">
+
+                        <RadioButton
+                            android:text="miles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rbDistanceMilesI"
+                            android:layout_alignBaseline="@+id/rbDistanceKmI"
+                            android:layout_alignBottom="@+id/rbDistanceKmI"
+                            android:layout_toLeftOf="@+id/rbDistanceKmI"
+                            android:layout_toStartOf="@+id/rbDistanceKmI"
+                            android:layout_weight="1" />
+                        <RadioButton
+                            android:text="km"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rbDistanceKmI"
+                            android:layout_below="@+id/textView2"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_weight="1" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="0dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:text="Time:"
+                        android:layout_width="59dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvTimeI"
+                        android:textStyle="normal|bold"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:layout_width="37dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/etHoursI" />
+
+                    <TextView
+                        android:text="Hours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvHoursI"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:layout_width="38dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/etMinI" />
+
+                    <TextView
+                        android:text="Min"
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvMinI"
+                        android:textSize="18sp"
+                        android:layout_weight="0.24" />
+
+                    <EditText
+                        android:layout_width="24dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/etSecondsI"
+                        android:layout_weight="0.09" />
+
+                    <TextView
+                        android:text="Seconds"
+                        android:layout_width="62dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvSecondsI"
+                        android:textSize="18sp"
+                        android:layout_weight="0.37" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_below="@+id/linearLayout3"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+                    <Button
+                        android:text="Calculate average speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnSpeedI"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearLayout3"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginTop="0dp">
+
+                    <TextView
+                        android:text="Average Speed:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvSpeedI"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                    android:text="                 "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvSpeedResultI"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Time calculator"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvDistanceI"
+                    android:layout_marginTop="0dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/linearLayoutter">
+
+                    <TextView
+                        android:text="Speed:"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvSpeedII"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginStart="0dp"
+                        android:textSize="18sp"
+                        android:layout_alignTop="@+id/textView2"
+                        android:layout_toRightOf="@+id/rbDistanceMilesI"
+                        android:layout_toEndOf="@+id/rbDistanceMilesI"
+                        android:layout_weight="0.66"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="78dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="10"
+                        android:id="@+id/etSpeedII" />
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:checkedButton="@+id/rbMphII">
+                    <RadioButton
+                        android:text="mph"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbMphII"
+                        android:layout_alignBaseline="@+id/rbDistanceKmI"
+                        android:layout_alignBottom="@+id/rbDistanceKmI"
+                        android:layout_toLeftOf="@+id/rbDistanceKmI"
+                        android:layout_toStartOf="@+id/rbDistanceKmI" />
+
+                    <RadioButton
+                        android:text="kmh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbKmhII"
+                        android:layout_below="@+id/textView2"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_weight="0.04" />
+                    </RadioGroup>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvDistanceI"
+                    android:layout_marginTop="0dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/linearLayoutbis">
+
+                    <TextView
+                        android:text="Distance:"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvDistanceII"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginStart="0dp"
+                        android:textSize="18sp"
+                        android:layout_alignTop="@+id/textView2"
+                        android:layout_toRightOf="@+id/rbDistanceMilesI"
+                        android:layout_toEndOf="@+id/rbDistanceMilesI"
+                        android:layout_weight="0.66"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="78dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="10"
+                        android:id="@+id/etDistanceII" />
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:checkedButton="@+id/rbMilesII">
+                    <RadioButton
+                        android:text="miles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbMilesII"
+                        android:layout_alignBaseline="@+id/rbDistanceKmI"
+                        android:layout_alignBottom="@+id/rbDistanceKmI"
+                        android:layout_toLeftOf="@+id/rbDistanceKmI"
+                        android:layout_toStartOf="@+id/rbDistanceKmI" />
+
+                    <RadioButton
+                        android:text="km"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbKmII"
+                        android:layout_below="@+id/textView2"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_weight="0.04" />
+                    </RadioGroup>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_below="@+id/linearLayout3"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+                    <Button
+                        android:text="Calculate time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnTimeII"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearLayout3"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginTop="0dp">
+
+                    <TextView
+                        android:text="Time (hrs:min:sec):"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvTimeII"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="                 "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvTimeResultII"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Distance calculator"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvDistanceI"
+                    android:layout_marginTop="0dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/linearLayoutquad">
+
+                    <TextView
+                        android:text="Speed:"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvSpeedIII"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginStart="0dp"
+                        android:textSize="18sp"
+                        android:layout_alignTop="@+id/textView2"
+                        android:layout_toRightOf="@+id/rbDistanceMilesI"
+                        android:layout_toEndOf="@+id/rbDistanceMilesI"
+                        android:layout_weight="0.66"
+                        android:textStyle="normal|bold" />
+
+                    <EditText
+                        android:layout_width="78dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:ems="10"
+                        android:id="@+id/etSpeedIII" />
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:checkedButton="@+id/rbMphIII">
+                    <RadioButton
+                        android:text="mph"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbMphIII"
+                        android:layout_alignBaseline="@+id/rbDistanceKmI"
+                        android:layout_alignBottom="@+id/rbDistanceKmI"
+                        android:layout_toLeftOf="@+id/rbDistanceKmI"
+                        android:layout_toStartOf="@+id/rbDistanceKmI" />
+
+                    <RadioButton
+                        android:text="kmh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbKmhIII"
+                        android:layout_below="@+id/textView2"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_weight="0.04" />
+                    </RadioGroup>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="0dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:text="Time:"
+                        android:layout_width="59dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewbis"
+                        android:textStyle="normal|bold"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:layout_width="37dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/etHoursIII" />
+
+                    <TextView
+                        android:text="Hours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView3bis"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:layout_width="38dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/etMinIII" />
+
+                    <TextView
+                        android:text="Min"
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView4bis"
+                        android:textSize="18sp"
+                        android:layout_weight="0.24" />
+
+                    <EditText
+                        android:layout_width="24dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/etSecondsIII"
+                        android:layout_weight="0.09" />
+
+                    <TextView
+                        android:text="Seconds"
+                        android:layout_width="62dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView5bis"
+                        android:textSize="18sp"
+                        android:layout_weight="0.37" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_below="@+id/linearLayout3"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+                    <Button
+                        android:text="Calculate distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnDistanceIII"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearLayout3"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginTop="0dp">
+
+                    <TextView
+                        android:text="Distance :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView9bis"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold" />
+
+                    <TextView
+                        android:text="                 "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvDistanceResultIII"
+                        android:textSize="18sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
